@@ -1,0 +1,79 @@
+.icon-small{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('../images/sprites2.png');
+}
+/* Small Icons */
+.phone{
+  background-position: 0 0;
+  margin: 0 0.75em -3px 0;
+}
+.envelope{
+  background-position: -64px 0;
+  margin: 0 0.75em -3px 0;
+}
+.arrow-right{
+  background-position: -128px 0;
+  margin: 0 0 -4px 0.75em;
+}
+.cycle-prev,
+.cycle-next{
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  display: block;
+  background: url('../images/sprites2.png');
+  cursor: pointer;
+}
+.cycle-prev{
+  top: 50%;
+  left: -6em;
+  margin-top: -21px;
+background-position: 0 -128px;
+}
+.cycle-prev:hover{
+background-position: -128px -128px;
+}
+.cycle-next{
+  top: 50%;
+  right: -6em;
+  margin-top: -21px;
+background-position: -64px -128px;
+}
+.cycle-next:hover{
+background-position: -192px -128px;
+}
+
+@link-color: #E74B34;
+@link-color-hover: #123C3B;
+
+@text-color: #6c6c6c;
+@border-color: #E0E0E0
+@blockquote-color: #2894d8;
+@header-main-color: #3694b7;
+@light-bg-heading-one: #3b5568;
+@light-bg-heading-two: #6694b4;
+@dark-bg-heading-one: white;
+@dark-bg-heading-two: #3694b7;
+
+@body-font "Cabin", Helvetica, Arial, sans-serif;
+@serif-font: "Gentium Basic", Georgia, serif;
+@heading-font: @body-fony;
+
+/*  Keyframes - WebKit only
+------------------------------------------ */
+@-webkit-keyframes steady {
+    50%  { -webkit-transform: translateY(20px);}
+}
+@-webkit-keyframes bigger {
+    50%  { -webkit-transform: scale(1.8) translateY(-100px); opacity: 0;}
+}
+@-webkit-keyframes bg-move {
+    0%, 100%   { background-position:  100% -560px;}
+50% { background-position: -350% -460px;}
+}
+@-webkit-keyframes block {
+    50%  { -webkit-transform: scale(1.2) translateY(10px)}
+}
+

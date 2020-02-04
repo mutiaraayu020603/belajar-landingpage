@@ -1,0 +1,619 @@
+.wf-loading* {
+  opacity: 0;
+}
+.wf-loading{
+  background: url('../images/ajax-loader.gif') center center no-repeat;
+  height: 100%;
+}
+.wf-active*,
+.wf-inactive* {
+  -webkit-transition: opacity 1s ease-out;
+  -moz-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+
+body {
+font: 14px/21px "Cabin", Helvetica, Arial, sans-serif;
+  color: #6c6c6c;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+p {
+  margin-bottom: 21px;
+}
+h1 {
+  font: 36px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+}
+h2,
+h3 {
+  font: 21px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+}
+h4 {
+  font: 16px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+}
+h5 {
+  font: 14px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+}
+h6 {
+  font: 12px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #e74b34;
+  text-decoration: none;
+}
+a:hover{
+  color: #132c3b;
+}
+.link-go-top{
+  font: italic 14px "Gentium Basic", Georgia, serif;
+}
+.section-small-features .link-go-top{
+  color: #ffc240;    
+}
+blockquote {
+  font: italic 21px/1.5em "Gentium Basic", Georgia, serif;
+  color: #2894d8;
+}
+blockquote cite {
+  display: block;
+  margin-top: 42px;
+  font-size: 16px;
+  font-style: normal;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ededed;
+  margin: 3em 0;
+}
+.button{
+  display: inline-block;
+  padding: 0 1em;
+
+/* warna */
+  color: white;
+  background-color: #e74b34;
+
+/* Gradasi warna */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e74b34), to(#e4371d));
+  background-image: -webkit-linear-gradient(top, #e74b34, #e4371d);
+  background-image: -moz-linear-gradient(top, #e74b34, #e4371d);
+  background-image: -o-linear-gradient(top, #e74b34, #e4371d);
+  background-image: linear-gradient(to bottom, #e74b34, #e4371d);
+
+/* radius */
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+
+/*clip*/
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+
+/*border and shadows*/
+  -webkit-box-shadow: 0 0 0 4px #f2f2f2, inset 0 1px 2px #f4b0a6;
+  box-shadow: 0 0 0 4px #f2f2f2, inset 0 1px 2px #f4b0a6;
+  border: 1px solid #e4371d;
+
+/*text*/
+  height: 3em;
+  line-height: 3em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.button:hover{
+  color: white;
+  background-color: #ea5f4b;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ea5f4b), to(#e74b34));
+  background-image: -webkit-linear-gradient(top, #ea5f4b, #e74b34);
+  background-image: -moz-linear-gradient(top, #ea5f4b, #e74b34);
+  background-image: -o-linear-gradient(top, #ea5f4b, #e74b34);
+  background-image: linear-gradient(to bottom, #ea5f4b, #e74b34);
+}
+.top-header{
+  padding: 1.5em 0;
+}
+.logo{
+  background: transparent url('../images/icon-sosio/head logo.png') left center no-repeat;
+  display: block;
+  height: 63px;
+  min-width: 100%;
+}
+.list-top-contact-info{
+  float: right;
+  margin-top: 1.5em;
+}
+.list-top-contact-info li {
+  float: left;
+  border-right: 1px dotted #6c6c6c;
+  margin-right: 1.5em;
+  padding-right: 1.5em;
+  list-style: none;
+}
+.list-top-contact-info li a.telp {
+color: #6c6c6c;
+}
+.button-top-cta{
+  float: right;
+  margin-top: .75em;
+  width: 210px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+}
+.button-top-cta span {
+padding-left : 1em;
+}
+.section-main-cta{
+  background: #006699 url('../images/icon-sosio/leel.png') center;
+  text-align: center;
+  padding: 3em 0;
+  -webkit-box-shadow: inset 0 -8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-animation: bg-move 20s ease-in-out infinite;
+  animation: bg-move 20s ease-in-out infinite;
+}
+.section-main-cta h1 {
+  color: white;
+  font: 42px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.section-main-cta h2 {
+  color: #ffcc33;
+  font: 26px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.section-main-cta blockquote {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.section-main-cta blockquote::before{
+  position: absolute;
+  content: url('../images/icon-sosio/layer25.png');
+  width: 33px;
+  height: 23px;
+  left: -2em;
+  top: 0;
+}
+.section-main-cta blockquote::after{
+  position: absolute;
+  content: url('../images/icon-sosio/layer24.png');
+  width: 33px;
+  height: 23px;
+  right: -2em;
+  bottom: 70px;
+}
+.section-main-cta blockquote cite {
+  color: white;
+}
+.form-single-field{
+  padding: 3em 0;
+}
+.form-single-field input[type="email"],
+.form-single-field input[type="text"]{
+  height: 63px;
+  width: 100%;
+  font: 21px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+  padding: 0 8em 0 1em;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.15);
+  outline: none;
+  border: none;
+}
+.form-single-field>p {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+.form-single-field>p input[type="submit"]{
+  position: absolute;
+  right: 1em;
+  top: .75em;
+  cursor: pointer;
+  height: 70%;
+  width: 15%;
+  font: bold 14px "Cabin", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+blockquote {
+  font: italic 21px/1.5em "Gentium Basic", Georgia, serif;
+  color: white;
+}
+blockquote cite {
+  display: block;
+  margin-top: 42px;
+  font-size: 16px;
+  font-style: normal;
+}
+cite span {
+color : #ffc240;
+}
+.section-big-features{
+  background: url('../images/pattern-light.png');
+  text-align: center;
+  padding: 3em 0;  
+}
+.section-big-features h1,
+.section-big-features h3 {
+  color: #3b5568;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+.section-big-features h2 {
+  color: #6694b4;
+  font-size: 1.5em;
+}
+.list-big-features{
+  margin: 3em 0 1.5em 0;
+}
+.list-big-features li {
+  background: white;
+  border: 2px solid #e0e0e0;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  padding: 2em 1.5em 1em 1.5em;
+  margin: 1.5em 0;
+  list-style: none;
+}
+.list-big-features li h3 {
+  margin-bottom: 11px;
+}
+.list-big-features li:hover{
+    background-color: #eee;
+    padding: 4em 1em;
+    margin: -1em -1em;
+    transition: 0.2s;
+    overflow: visible;
+    cursor: pointer;
+    border-radius: 50px;
+z-index: 100;
+}
+
+header img {
+    -webkit-animation:  steady 4s ease-in-out infinite;
+    -moz-animation:  steady 4s ease-in-out infinite;
+    animation:  steady 4s ease-in-out infinite;
+}
+
+header img:hover{
+    -webkit-animation: bigger 3s ease-in-out infinite;
+    -moz-animation: bigger 3s ease-in-out infinite;
+    animation: bigger 3s ease-in-out infinite;
+}
+.section-small-features{
+  background: #006699 url('../images/icon-sosio/leel.png') center;
+  text-align: center;
+  padding: 3em 0;
+   -webkit-animation: bg-move 20s ease-in-out infinite;
+}
+.section-small-features h1 {
+  color: #ffffff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.section-small-features h3,
+.section-small-features h4 {
+  color: #ffcc33;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.list-small-features{
+  margin: 3em 0 1.5em 0;
+}
+.section-small-features.link-go-top:hover{
+  color: white;
+}
+.list-small-features li {
+  border-radius: 10px;
+  color: white;
+  text-align: left;
+  margin-bottom: 1.5em;
+  list-style: none;
+  padding: 10px;
+}
+.list-small-features li:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    text-shadow: none;
+    -webkit-animation: block 1s ease;
+    opacity: 0.9;
+}
+
+.list-small-features li h4 {
+  margin-bottom: 21px;
+}
+.list-small-features li h4,
+.list-small-features li p {
+  margin-left: 90px;
+}
+.list-small-features img {
+    float:left;
+}
+.section-customers{
+  background: white;
+  text-align: center;
+  padding: 3em 0;
+}
+.section-customers h1 {
+  color: #3b5568;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+.section-customers h4 {
+  padding-top: 1em;
+  color: #6694b4;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+.section-customers blockquote {
+  position: relative;
+  margin: 0 2em;
+}
+
+.section-customers blockquote::before{
+  position: absolute;
+  content: url('../images/icon-sosio/layer25.png');
+  width: 33px;
+  height: 23px;
+  left: -2em;
+  top: 0;
+}
+.section-customers blockquote::after{
+  position: absolute;
+  content: url('../images/icon-sosio/layer24.png');
+  width: 33px;
+  height: 23px;
+  right: -2em;
+  bottom: 70px;
+}
+.section-customers blockquote cite {
+  color: #6c6c6c;
+}
+.list-customers{
+  margin-left: 3em;
+}
+.list-customers li {
+  text-align: left;
+  float: left;
+  list-style: none;
+}
+.list-customers li img {
+  margin: 2em 0.35em;
+}
+img +blockquote {
+    color: #6694b4;
+}
+.section-gallery{
+  background: url('../images/pattern-light.png');
+  text-align: center;
+  padding: 3em 0;
+  -webkit-box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+.section-gallery h1 {
+  color: #3b5568;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+.section-gallery h4 {
+  color: #6694b4;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+.cycle-slideshow{
+  margin: 3em auto;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+.cycle-slideshow img {
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+#alt-caption{
+  font: italic 14px/21px "Gentium Basic", Georgia, serif;
+}
+#alt-caption::before{
+  content: "- ";
+}
+#alt-caption::after{
+  content: " -";
+}
+.section-footer-cta{
+  background: #1d2d3c url('../images/icon-sosio/leel.png') center;
+  -webkit-box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.1);
+   -webkit-animation: bg-move 20s ease-in-out infinite;
+  color:white;
+  font-size: 0.9em;
+  font-family: 'Open Sans';
+  height: auto;
+}
+#news_box{
+  float: left;
+  background-color: #0079ae;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  line-height: 1.75em;
+}
+#news{
+    padding: 60px 10px 100px 10px;
+}
+#news ul li{
+    display:inline;
+}
+li >span {
+    color: black;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+li+hr {
+    margin: 0;
+}
+p+h4 {
+    display: inline;
+}
+#left_footer{
+  padding: 60px 10px;
+}
+#left_footer article{
+    padding: 0 85px 30px 0;
+}
+#left_footer article a{
+    color: #d58609;
+    text-decoration: underline;
+}
+.sosio-icons li {
+  text-align: left;
+  float: left;
+  list-style: none;
+}
+.sosio-icons li img {
+    padding: 2px 5px;
+}
+.sosio-icons li img:hover{
+    padding: 10px 10px;
+    margin: -10px -10px;
+}
+#last_footer{
+width: 100%;
+background-color: #111a21;
+color: white;
+padding: 10px;
+text-align: right;
+}
+#last_footer .col-lg-offset-7{
+    text-align: center;
+    font-family: 'Open Sans'; /**/
+    font-size: 0.9em;
+}
+
+.logo-container-mobile {
+    width: 33.33333333%;
+    float: left;
+}
+
+
+@media screen and (max-width: 1199px){
+  .logo-container-mobile {
+    width: 50%;
+    float: none;
+    margin: auto;
+  }
+  .list-top-contact-info{
+    padding-right: 50px;
+  }
+  .button-top-cta{
+    margin-left: 50px;
+  }
+  .list-customers li img{
+    margin: 2em;
+  }
+
+}
+@media screen and (max-width: 767px){
+  .button-top-cta{
+    margin: 10px;
+    margin-bottom: 10px;
+    width: 95%; 
+  }
+  .list-customers li img{
+     position: relative;
+     height: 29px;
+  }
+  .logo-container-mobile {
+    width: 60%;
+    float: none;
+  }
+  .list-top-contact-info{
+    float: left;
+    margin-left: 70px;
+  }
+  .list-customers li{
+    margin-left: 0.35px;
+    margin-right: 0px;
+  }
+  .form-single-field input[type="email"], .form-single-field input[type="text"]{
+    height: 50px;
+    width: 120%;
+    margin-right: 100px;
+    padding-right: 10px;
+  }
+  .form-single-field>p input[type="submit"]{
+    margin-left: 50px;
+    margin-right: 90px;
+    padding-right: 60px;
+    padding-left: 5px;
+    float: right;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 575px){
+
+ .list-top-contact-info{
+    margin-left: 50px;
+  }
+  .button-top-cta{
+    margin: 10px;
+    margin-bottom: 5px; 
+    width: 95%;
+  }  
+  .list-top-contact-info li{
+    padding-left: 50px;
+  }
+  .logo-container-mobile {
+    width: 50%;
+    min-width: 170%;
+    margin: auto; 
+  }
+  .form-single-field input[type="email"]{
+    min-width: 177%;
+    padding-left: 0.3px;
+    padding-right: 20px;
+    
+  }
+  .form-single-field input[type="text"]{
+    margin-right: 0.2px;
+  }
+  .form-single-field>p{
+    margin-left: 0.2px;
+    padding-right: 0.50px;
+    padding-left: 0.50px;
+  }
+}
+
+@media screen and (max-width: 991px){
+  .button-top-cta{
+    margin: 10px;
+    margin-bottom: 10px;
+    width: 95%; 
+  }
+  .list-top-contact-info{
+    margin-right: 50px;
+  }
+  .list-customers li img{
+    margin: 2em 0.50em;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .list-top-contact-info li{
+    border-right: 0px;
+  }
+}
+
+@media screen and (max-width: 320px){
+ .list-top-contact-info li{
+  text-align: center;
+  padding-left: 0px;
+ }
+}
